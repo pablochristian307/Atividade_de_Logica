@@ -5,10 +5,11 @@
 int main(void) {
     /*int r, n;
 
-    printf("Informe o valor de n e r, respectivamente:\n");
+    printf("Informe o valor de n e r, respectivamente(Valores inteiros e positivos):\n");
     scanf("%d %d", &r, &n);*/
     
-    combinacao(3,4);
+    printf("%d\n", fatorial(0));
+    combinacao(5,2);
     
     return 0;
 }
