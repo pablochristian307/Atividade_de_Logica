@@ -13,16 +13,26 @@ int fatorial(int num) {
     return resultado;
 }
 
-void combinacao(int r, int n) {
-    if (r < 0 || n < 0) {
+void combinacao(int n, int r) {
+    if (n < 0 || r < 0) {
         printf("Erro: Não existe fatorial de número negativo.\n");
     } 
-    else if (r >= n) {
-        int subtracao_r_n = (r - n);
-        int resultado = fatorial(r) / (fatorial(n) * fatorial(subtracao_r_n));
-        printf("C(%d,%d) = %d\n", r, n, resultado);
+    else if (n >= r) {
+        int subtracao_n_r = (n - r);
+        int resultado = fatorial(n) / (fatorial(r) * fatorial(subtracao_n_r));
+        printf("C(%d,%d) = %d\n", n, r, resultado);
     }
     else {
-        printf("Erro: r (%d) não pode ser menor que n (%d)\n", r, n);
+        printf("Erro: n (%d) não pode ser menor que r (%d)\n", n, r);
+    }
+}
+
+int comb(int n, int r) {
+    if (r <= n) {
+        int sub = (n-r), resultado = fatorial(n) / (fatorial(r) * fatorial(sub));
+        return resultado;
+    }
+    else {
+        return -1;
     }
 }

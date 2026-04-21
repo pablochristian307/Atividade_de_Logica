@@ -1,2 +1,3 @@
 int fatorial(int num);
-void combinacao(int r, int n);
+void combinacao(int n, int r);
+int comb(int n, int r);
